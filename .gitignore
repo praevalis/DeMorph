@@ -1,0 +1,11 @@
+#frontend files
+node_modules/
+
+#backend files
+venv/
+pyvenv.cfg
+__pycache__/
+
+#environment files
+.env 
+.flaskenv
