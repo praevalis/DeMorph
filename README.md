@@ -11,7 +11,7 @@ A comprehensive deepfake detection solution.
 
 ## Technologies Used
 - **Languages**: Python, TypeScript
-- **Frameworks**: Flask, React
+- **Frameworks**: Flask, React, TailwindCSS
 - **DL & CV**: PyTorch, OpenCV, GradCAM
 - **Database**: PostgreSQL
 
