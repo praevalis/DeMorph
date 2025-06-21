@@ -1,3 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+	--color-cursed-noir: #121213;
+	--color-ultra-moss: #bdff4c;
+	--color-wet-concrete: #383838;
+	--color-walk-park: #7db614;
+
+	--font-pirata-one: 'Pirata One', system-ui;
+	--font-kaisei: 'Kaisei Decol', serif;
+	--font-kanit: 'Kanit', sans-serif;
+}
