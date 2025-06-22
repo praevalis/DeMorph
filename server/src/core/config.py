@@ -1,4 +1,4 @@
-from pydantic import Field
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     POSTGRES_URI: str
 
     ALGORITHM: str
-    SECRET_KEY: str
+    SECRET_KEY: SecretStr
     REFRESH_TOKEN_EXPIRES_DAYS: int
     ACCESS_TOKEN_EXPIRES_MINUTES: int  
     ALLOWED_ORIGINS: list[str] = Field(default_factory=list)

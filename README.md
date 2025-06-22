@@ -26,6 +26,6 @@ A comprehensive deepfake detection solution.
 
 ## Important Links
 
--   GitHub Repo: [Click Here]('https://github.com/Adm-2005/DeMorph-SIH-2024')
+-   GitHub Repo: [Click Here]('https://github.com/praevalis/DeMorph')
 -   Live Project: [Click Here]('')
 -   Documentation: [Click Here]('')

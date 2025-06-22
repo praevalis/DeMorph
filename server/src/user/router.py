@@ -6,7 +6,7 @@ from fastapi import APIRouter, Depends, status
 from src.core.logging import logger
 from src.core.metadata import ApiTags
 from src.user.services import update_user, delete_user
-from src.core.exceptions import InternalServerErrorException
+from src.core.exceptions import InternalServerException
 from src.core.dependencies import get_db_session, get_current_user
 from src.user.schemas import UserDto, UserResponseDto, UserUpdateDto
 
@@ -20,7 +20,7 @@ async def update_user_controller(
     user_id: UUID, 
     update_data: UserUpdateDto, 
     session: Annotated[Session, Depends(get_db_session)],
-    current_user: Annotated[UserDto, Depends()]
+    current_user: Annotated[UserDto, Depends(get_current_user)]
 ) -> UserResponseDto:
     """
     Endpoint to update user.
@@ -43,7 +43,7 @@ async def update_user_controller(
     
     except Exception as e:
         logger.error(f'Error while updating user {user_id}: {str(e)}')
-        raise InternalServerErrorException()
+        raise InternalServerException()
     
 @router.delete('/{user_id}', status_code=status.HTTP_200_OK, response_model=UserResponseDto)
 async def delete_user_controller(
@@ -68,4 +68,4 @@ async def delete_user_controller(
     
     except Exception as e: 
         logger.error(f'Error while deleting user {user_id}: {str(e)}')
-        raise InternalServerErrorException()
+        raise InternalServerException()

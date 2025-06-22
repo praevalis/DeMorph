@@ -20,6 +20,6 @@ class UnprocessableEntityException(HTTPException):
     def __init__(self, detail: str = 'Unprocessable entity'):
         super().__init__(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=detail)
 
-class InternalServerErrorException(HTTPException):
+class InternalServerException(HTTPException):
     def __init__(self, detail: str = 'Internal server error'):
         super().__init__(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=detail)
