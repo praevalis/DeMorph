@@ -1,0 +1,15 @@
+[project]
+name = "demorph-server"
+version = "0.1.0"
+description = "DeMorph is a multimodal deepfake detection solution."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.16.2",
+    "fastapi[standard]>=0.115.13",
+    "loguru>=0.7.3",
+    "psycopg2>=2.9.10",
+    "psycopg2-binary>=2.9.10",
+    "pydantic-settings>=2.10.0",
+    "sqlalchemy>=2.0.41",
+]
